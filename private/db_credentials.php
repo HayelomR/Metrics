@@ -1,16 +1,19 @@
 <?php
-define("DB_SERVER", "	blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com");
-define("DB_USER", "lhsbz5crfzusmwag");
-define("DB_PASS", "wyl5adec8otkm9dt");
-define("DB_NAME", "ge7swizm5mv7k3qa");
+$url = getenv('mysql://lhsbz5crfzusmwag:wyl5adec8otkm9dt@blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ge7swizm5mv7k3qa
 
+');
+$dbparts = parse_url($url);
 
-$connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
-// echo "You are connected";
-                  // Check connection
-if(! $connection ) {
-	die('Could not connect: ' . mysqli_error());
-}
+$hostname = $dbparts['blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'];
+$username = $dbparts['lhsbz5crfzusmwag'];
+$password = $dbparts['wyl5adec8otkm9dt'];
+$database = ltrim($dbparts['path'],'/');
+// $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+// // echo "You are connected";
+//                   // Check connection
+// if(! $connection ) {
+// 	die('Could not connect: ' . mysqli_error());
+// }
 
 ?>
 
