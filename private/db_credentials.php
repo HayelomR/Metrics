@@ -14,6 +14,13 @@ $database = ltrim($dbparts['path'],'/');
 // if(! $connection ) {
 // 	die('Could not connect: ' . mysqli_error());
 // }
+// Create connection
+$conn = mysqli_connect($hostname, $username, $password, $database);
 
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connection was successfully established!";
 ?>
 
