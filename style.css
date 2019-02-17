@@ -1,0 +1,141 @@
+body {
+  line-height:normal;
+  font-family: 'Adrianna-Regular';
+  color: #3B3B3C;
+}
+
+th {
+  border-left: 3px solid #4888c7;
+  color: black;
+
+}
+
+.goalActual {
+  font-weight: bold;
+  background-color: #1F618D;
+  font-size: 1rem;
+  color: black;
+
+}
+
+
+h2, #groupYear {
+ font-size: 34px;
+ margin-left: 25px;
+ color: red;
+ margin-bottom: -10px;
+}
+.percent::after {
+ content: " %";
+}
+
+.dollars::before {
+  content:"$";
+}
+.negMoney {
+  color:red;
+}
+.dollars.negMoney::before {
+  content:'( - $';
+}
+.dollars.negMoney::after {
+  content:' ) ';
+}
+
+#metricLabel {
+   background-color: #87ceeb;
+   color: #87ceeb; 
+   display:none; 
+   text-align: left;"
+}
+td {
+ border:1px solid #4888c7;
+ margin: 0px;
+ text-align: right;
+
+}
+.table td:nth-child(3n+2) {
+ border-right:4px solid #4888c7;
+
+} 
+.table td:nth-child(2) {
+   text-align: left;
+
+} 
+.table td:nth-child(1) {
+   text-align: left;
+
+} 
+
+.table thead th  {
+  background-color: #1F618D;
+  text-align: center;
+  border-bottom:1px solid #4888c7;
+  border-top:none;
+
+}
+
+.item {
+  background-color: red;
+}
+
+.table {
+  margin-left: 10px;
+}
+.Membership, .Chartering, .Group, .collectiveData,.MOMcon, 
+.Leadership, .Development,.Sponsor, .IT, .Mops,.Service,.Colletives {
+  background-color: #87ceeb;
+  margin-left: -80%;
+  text-align: left;
+  border-right:4px solid #4888c7;
+
+}
+
+div.scrollmenu {
+ overflow: auto;
+ white-space: nowrap;
+}
+
+div.scrollmenu {
+  display: inline;
+/*    display: inline-block;
+*/    padding: 14px;
+text-decoration: none;
+}
+
+label {
+  margin-right: 10px;
+}
+
+
+.container {
+
+  text-align: center;
+  background-color: #1F618D;
+  color: white;
+
+}
+
+p {
+  margin-top: 10px;
+  font-size: 24px;
+  margin-left: 50px;
+  border-bottom: 3px solid #1F618D;
+  margin-right: 80%;
+}
+
+
+img {
+  float: right;
+  margin-top: -90px;
+}
+
+
+h2 {
+
+  font-size: 15px;
+  margin-bottom: -10px;
+}
+
+
+
