@@ -155,10 +155,10 @@
                   <tbody>
                      <?php
                      error_reporting(E_ERROR | E_PARSE);
-                     $dbhost = '127.0.0.1';
-                     $dbuser = 'root';
-                     $dbpass = '';
-                     $dbname = 'mops';
+                     $dbhost = 'blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+                     $dbuser = 'lhsbz5crfzusmwag';
+                     $dbpass = 'wyl5adec8otkm9dt';
+                     $dbname = 'ge7swizm5mv7k3qa';
                      $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
                   // Check connection
                      if(! $conn ) {
