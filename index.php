@@ -154,19 +154,11 @@
                   </thead>
                   <tbody>
                      <?php
-                     error_reporting(E_ERROR | E_PARSE);
-                     $dbhost = 'blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
-                     $dbuser = 'lhsbz5crfzusmwag';
-                     $dbpass = 'wyl5adec8otkm9dt';
-                     $dbname = 'ge7swizm5mv7k3qa';
-                     $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
-                  // Check connection
-                     if(! $conn ) {
-                        die('Could not connect: ' . mysqli_error());
-                     }
+                       require_once('./private/db_credentials.php'); 
+                        error_reporting(E_ERROR | E_PARSE);
                      // echo 'Connected successfully<br>';
                      $result = 'select metric_group_label from rpt_organizational_metric_group';
-                     $metricData = mysqli_query($conn,$result);
+                     $metricData = mysqli_query($connection,$result);
                      foreach ($metricData as $value) {
                         echo '<tr>
                         <td id="metricLabel">&nbsp;</td>
@@ -174,7 +166,7 @@
                         </tr>';
 
                         $metricData = 'select * from rpt_organizational_metric m INNER JOIN rpt_organizational_metric_group g ON m.rpt_organizational_metric_group_id = g.rpt_organizational_metric_group_id where metric_group_label = "'.$value['metric_group_label'].'"';
-                        $metricData = mysqli_query($conn,$metricData);
+                        $metricData = mysqli_query($connection,$metricData);
                      // var_dump($charteringData);
                         foreach ($metricData as $metric) {
                            echo '<tr>
